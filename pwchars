@@ -1,6 +1,6 @@
 #!/bin/bash
 # Pick selected characters from piped password (separate with commas)
-read pw
+read -s pw
 
 ar=($(echo $1 | sed 's/,/ /g'))
 for i in "${ar[@]}"
