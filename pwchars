@@ -5,6 +5,5 @@ read pw
 ar=($(echo $1 | sed 's/,/ /g'))
 for i in "${ar[@]}"
 do
-    echo $i
     echo ${pw:(($i-1)):1}
 done
