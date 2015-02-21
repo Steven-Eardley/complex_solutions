@@ -1,10 +1,11 @@
 #!/bin/bash
 # Wee scriptie for reporting changes to external IP
 # Requires proper configuration of mailutils
+# These emails love being detected as spam. Try a filter.
 
 ip_service="http://ipecho.net/plain"
-file_path="/home/steve/code/me/complex_solutions/external_ip.txt"
-emails="steve@eardley.xyz"
+file_path="~/external_ip.txt"
+emails="email@example.org,email2@example.org"
 
 hostname=$(cat /etc/hostname)
 lastip=$(cat $file_path 2> /dev/null || echo "404")
