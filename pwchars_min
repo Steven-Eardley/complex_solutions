@@ -1,0 +1,2 @@
+#!/bin/bash
+read -s pw;ar=($(echo $1 | sed 's/,/ /g'));for i in "${ar[@]}"; do echo ${pw:(($i-1)):1};done
