@@ -11,7 +11,7 @@ hostname=$(cat /etc/hostname)
 lastip=$(cat $file_path 2> /dev/null || echo "404")
 currip=$(curl -s $ip_service)
 
-if [ $lastip != $currip ]
+if [[ $currip ]] && [[ $lastip != $currip ]]
 then
     echo $currip > $file_path
     mail -s "External IP change for $hostname" $emails < $file_path
