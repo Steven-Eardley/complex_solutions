@@ -4,7 +4,7 @@
 # These emails love being detected as spam. Try a filter.
 
 ip_service="http://ipecho.net/plain"
-file_path="~/external_ip.txt"
+file_path="${HOME}/external_ip.txt"
 emails="email@example.org,email2@example.org"
 
 hostname=$(cat /etc/hostname)
