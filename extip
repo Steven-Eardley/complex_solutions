@@ -1,7 +1,11 @@
 #!/bin/bash
-# Wee scriptie for reporting changes to external IP
-# Requires proper configuration of mailutils
-# These emails love being detected as spam. Try a filter.
+# Report changes of external IP to email addresses
+# Requires proper configuration of mailutils and postfix.
+# These emails love being detected as spam; try a filter.
+#
+# Add these lines to your crontab to run this every 15 minutes:
+#   SHELL=/bin/bash
+#   */15 * * * * ~/bin/extip
 
 ip_service="http://ipecho.net/plain"
 file_path="${HOME}/external_ip.txt"
